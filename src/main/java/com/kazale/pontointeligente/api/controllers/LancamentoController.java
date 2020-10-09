@@ -10,6 +10,7 @@ import org.apache.commons.lang3.EnumUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -51,7 +52,7 @@ public class LancamentoController {
 	@Autowired
 	private FuncionarioService funcionarioService;
 
-//	@Value("${paginacao.qtd_por_pagina}")
+	@Value("${paginacao.qtd_por_pagina}")
 	private int qtdPorPagina;
 
 	public LancamentoController() {
